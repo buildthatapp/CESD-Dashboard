@@ -1,0 +1,113 @@
+/*Stylesheet for Stage 1*/
+
+/* Color Scheme:
+#02b3e4 - cyan
+#02ccba - aquamarine
+#2b4e72 - dark blue
+#4CB24B - dark green
+#4119FF - dark blue
+#02FF00 - light green
+#CC6414 - light orange
+#B2662B - dark orange
+*/
+
+* {
+  /*outline: 1px solid red !important;*/
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+	color: #3E5169;
+  text-align: center;
+}
+
+
+header, main, nav, aside, footer {
+  flex: 1 100%;
+  color: #3E5169;
+}
+
+
+
+
+nav {
+  width: 100%;
+  position: fixed;
+  background-color: inherit;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+  text-align: center;
+  margin: 0 10px;
+  padding: 10px;
+  color: #3E5169;
+}
+
+
+
+#subtitle {
+  text-align: center;
+  color: #3E5169;
+  font-size: 1.2em;
+}
+
+body {
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+  color: ##3E5169;
+  background-color: white;
+}
+
+a {
+  color: #3E5169;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #294860;
+  background-color: white;
+}
+
+
+
+main {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.site-links {
+  background-color: #3E5169;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  border: 2px solid #3E5169;
+}
+
+.project {
+  width: 400px;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  border-top: 2px solid #3E5169;
+  border-left: 2px solid #3E5169;
+  color: #3E5169;
+}
+
+
+
+footer {
+  text-align: center;
+  font-weight: bold;
+}
