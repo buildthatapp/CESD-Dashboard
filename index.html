@@ -127,6 +127,69 @@
         chart.draw(data, options);
       }
     </script>
+
+
+    <!--chronic absentee-->
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+         ['School', '2016-2017', '2017-2018'],
+          ['Buena Terra',  5.00,      4.24],
+          ['Centralia',  6.83,      11.24],
+          ['Danbrook',  9.49,       10.37],
+          ['Dysinger',  4.54,      5.73],
+          ['Los Coyotes',  2.01,      1.65],
+          ['Miller',  3.00,     5.25],
+          ['San Marino',  6.07,       7.90],
+          ['Raymond Temple',  8.23,      8.99],
+          ['District', 5.82, 7.04]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Chronic Absentee Rate',
+          },
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chronic-absenteeism'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+
+     <!--truancy-->
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+         ['School', '2016-2017', '2017-2018'],
+          ['Buena Terra',  5.00,      4.24],
+          ['Centralia',  6.83,      11.24],
+          ['Danbrook',  9.49,       10.37],
+          ['Dysinger',  4.54,      5.73],
+          ['Los Coyotes',  2.01,      1.65],
+          ['Miller',  3.00,     5.25],
+          ['San Marino',  6.07,       7.90],
+          ['Raymond Temple',  8.23,      8.99],
+          ['District', 5.82, 7.04]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Truancy Rate',
+          },
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('truancy'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
 </head>
 <body>
     <header>
@@ -142,15 +205,9 @@
                 </div>
             </div>
             <div class="dropdown">
-                <button class="dropbtn">Teachers <i class="fa fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="#">Teacher 1</a> <a href="#">Teacher 2</a> <a href="#">Teacher 3</a>
-                </div>
-            </div>
-            <div class="dropdown">
                 <button class="dropbtn">CAASPP <i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-content">
-                    <a href="pages/district/caaspp_math.html">Math</a> <a href="pages/district/caaspp_ela.html">ELA</a>
+                    <a href="./pages/district/caaspp_math.html">Math</a> <a href="./pages/district/caaspp_ela.html">ELA</a>
                 </div>
             </div>
         </div>
