@@ -1,19 +1,10 @@
 /*Stylesheet for Stage 1*/
 
 /* Color Scheme:
-#02b3e4 - cyan
-#02ccba - aquamarine
-#2b4e72 - dark blue
-#4CB24B - dark green
-#4119FF - dark blue
-#02FF00 - light green
-#CC6414 - light orange
-#B2662B - dark orange
+
 */
 
 * {
-  /*outline: 1px solid red !important;*/
-
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -51,6 +42,10 @@ h1 {
   padding: 10px;
   color: #3E5169;
 }
+header h1 {
+  text-align: left;
+  display: inline-block;
+}
 
 
 
@@ -77,10 +72,6 @@ a:hover {
   background-color: white;
 }
 
-#attendance {
-  width: 900px; 
-  height: 500px;
-}
 
 
 main {
@@ -97,7 +88,10 @@ main {
 }
 
 .project {
-  width: 400px;
+  width: 23%;
+  min-width: 300px;
+  height: 50%;
+  min-height: 300px;
   border-radius: 15px;
   padding: 10px;
   margin: 10px;

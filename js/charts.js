@@ -11,7 +11,7 @@
         ]);
 
         var options = {
-          title: 'Company Performance',
+          title: 'Attendance Rate',
           curveType: 'function',
           legend: { position: 'bottom' }
         };
