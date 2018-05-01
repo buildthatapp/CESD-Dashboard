@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Centralia | Math</title>
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/navbar.css" rel="stylesheet">
+    <script src="../..//js/charts.js" type="text/javascript">
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://www.gstatic.com/charts/loader.js" type="text/javascript">
+    </script>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!--math concepts and procedures-->
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Performance Bands', '2014-2015', '2015-2016', '2016-2017'],
+          ['Above Average', 29.79, 38.22, 40.11],
+          ['Below Average', 34.52, 28.33, 27.90],
+          ['Near Standard', 35.69, 33.45, 31.99]
+        ]);
+
+        var options = {
+          title: 'Concepts and Procedures',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('concepts-and-procedures'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+
+    <!--math problem solving, modeling, & data analysis-->
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Performance Bands', '2014-2015', '2015-2016', '2016-2017'],
+          ['Above Average', 24.69, 27.23, 30.65],
+          ['Below Average', 31.66, 27.15, 25.93],
+          ['Near Standard', 43.65, 45.62, 43.42]
+        ]);
+
+        var options = {
+          title: 'Problem Solving, Modeling, & Data Analysis',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('problem-solving'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+
+     <!--math communicating reasoning-->
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Performance Bands', '2014-2015', '2015-2016', '2016-2017'],
+          ['Above Average', 6.44, 11.20, 11.86],
+          ['Below Average', 5.86, 8.31, 8.35],
+          ['Near Standard', 12.64, 18.15, 17.18]
+        ]);
+
+        var options = {
+          title: 'Communicating Reasoning',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('communicating-reasoning'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+</head>
+<body>
+    <header>
+        <a href="home.html"><img src="../../images/school2.png">
+        <h1>Centralia<br>
+        Elementary School</h1></a>
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">Teachers <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#">Teacher 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">CAASPP <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="caaspp_math.html">Math</a> <a href="caaspp_ela.html">ELA</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <article class="project" id="concepts-and-procedures">
+        </article>
+        <article class="project" id="problem-solving">
+        </article>
+        <article class="project" id="communicating-reasoning">
+        </article>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+    </script>
+</body>
+</html>

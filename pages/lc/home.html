@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Centralia Elementary Analytics</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/navbar.css" rel="stylesheet">
-    <script src="js/charts.js" type="text/javascript">
+    <title>Centralia</title>
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/navbar.css" rel="stylesheet">
+    <script src="../../js/charts.js" type="text/javascript">
     </script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://www.gstatic.com/charts/loader.js" type="text/javascript">
     </script>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <!--attendance-->
+    <!--attendance by month-->
     <script type="text/javascript">
       google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawChart);
@@ -42,7 +42,38 @@
       }
     </script>
 
-    <!--enrollment-->
+    <!--attendance last week by teacher-->
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['School', '2016-2017', '2017-2018'],
+          ['Buena Terra',  96.79,      97.02],
+          ['Centralia',  96.40,      96.58],
+          ['Danbrook',  96.55,       96.39],
+          ['Dysinger',  96.92,      96.68],
+          ['Los Coyotes',  98.10,      98.34],
+          ['Miller',  97.48,      97.57],
+          ['San Marino',  96.64,       96.69],
+          ['Raymond Temple',  95.97,      96.28],
+          ['District',  96.85,      96.94]
+        ]);
+
+        var options = {
+          title: 'Attendance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('attendance'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+
+    <!--enrollment by month-->
     <script type="text/javascript">
       google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawChart);
@@ -72,7 +103,7 @@
       }
     </script>
 
-    <!--suspensions-->
+    <!--suspensions by code-->
     <script type="text/javascript">
       google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawChart);
@@ -129,7 +160,7 @@
     </script>
 
 
-    <!--chronic absentee-->
+    <!--chronic absentees by grade-->
     <script type="text/javascript">
       google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawChart);
@@ -193,62 +224,20 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="./images/cesd_logo.png">
+        <a href="home.html"><img src="../../images/school2.png">
         <h1>Centralia<br>
-        Elementary<br>
-        School District</h1></a>
+        Elementary School</h1></a>
         <div class="navbar">
             <div class="dropdown">
-                <button class="dropbtn">Schools <i class="fa fa-caret-down"></i></button>
+                <button class="dropbtn">Teachers <i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-content">
-                    <a href="./pages/bt/home.html">Buena Terra</a>
-                    <a href="./pages/cn/home.html">Centralia</a> 
-                    <a href="./pages/db/home.html">Danbrook</a> 
-                    <a href="./pages/dy/home.html">Dysinger</a> 
-                    <a href="./pages/lc/home.html">Los Coyotes</a> 
-                    <a href="./pages/ml/home.html">Miller</a> 
-                    <a href="./pages/sm/home.html">San Marino</a> 
-                    <a href="./pages/rt/home.html">Raymond Temple</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Attendance <i class="fa fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="./pages/district/attendance_rate.html">Attendance Rate</a>
-                    <a href="./pages/district/truancy_rate.html">Truancy Rate</a>
-                    <a href="./pages/district/chronic_absentee_rate.html">Chronic Absentee Rate</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Enrollment <i class="fa fa-caret-down"></i></button>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Discipline <i class="fa fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="./pages/district/caaspp_math.html">Suspensions</a>
-                    <a href="./pages/district/caaspp_math.html">OMC</a>
+                    <a href="#">Teacher 1</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">CAASPP <i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-content">
-                    <a href="./pages/district/caaspp_math.html">Math</a> 
-                    <a href="./pages/district/caaspp_ela.html">ELA</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Foster Youth & MKV <i class="fa fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="./pages/district/caaspp_math.html">Foster Youth</a> 
-                    <a href="./pages/district/caaspp_ela.html">McKinney-Vento</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Language Fluency<i class="fa fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="./pages/district/caaspp_math.html">EL</a> 
-                    <a href="./pages/district/caaspp_ela.html">RFEP</a>
-                    <a href="./pages/district/caaspp_ela.html">IFEP</a>
+                    <a href="caaspp_math.html">Math</a> <a href="caaspp_ela.html">ELA</a>
                 </div>
             </div>
         </div>
