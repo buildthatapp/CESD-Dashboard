@@ -11,185 +11,6 @@
     <script src="https://www.gstatic.com/charts/loader.js" type="text/javascript">
     </script>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <!--attendance-->
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['School', '2016-2017', '2017-2018'],
-          ['Buena Terra',  96.79,      97.02],
-          ['Centralia',  96.40,      96.58],
-          ['Danbrook',  96.55,       96.39],
-          ['Dysinger',  96.92,      96.68],
-          ['Los Coyotes',  98.10,      98.34],
-          ['Miller',  97.48,      97.57],
-          ['San Marino',  96.64,       96.69],
-          ['Raymond Temple',  95.97,      96.28],
-          ['District',  96.85,      96.94]
-        ]);
-
-        var options = {
-          title: 'Attendance',
-          curveType: 'function',
-          legend: { position: 'bottom' }
-        };
-
-        var chart = new google.charts.Bar(document.getElementById('attendance'));
-
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-    </script>
-
-    <!--enrollment-->
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-         ['School', '2016-2017', '2017-2018'],
-          ['Buena Terra',  531,      556],
-          ['Centralia',  567,      526],
-          ['Danbrook',  646,       614],
-          ['Dysinger',  484,      485],
-          ['Los Coyotes',  522,      535],
-          ['Miller',  567,      571],
-          ['San Marino',  571,       533],
-          ['Raymond Temple',  528,      504]
-        ]);
-
-        var options = {
-          chart: {
-            title: 'Enrollment',
-          },
-        };
-
-        var chart = new google.charts.Bar(document.getElementById('enrollment'));
-
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-    </script>
-
-    <!--suspensions-->
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-         ['School', '2016-2017', '2017-2018'],
-          ['Buena Terra',  0,      1],
-          ['Centralia',  3,      8],
-          ['Danbrook',  0,       0],
-          ['Dysinger',  0,      1],
-          ['Los Coyotes',  0,      0],
-          ['Miller',  2,      1],
-          ['San Marino',  5,       2],
-          ['Raymond Temple',  14,      1]
-        ]);
-
-        var options = {
-          chart: {
-            title: 'Suspensions',
-          },
-        };
-
-        var chart = new google.charts.Bar(document.getElementById('suspension'));
-
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-    </script>
-    <!--english learners-->
-     <script type="text/javascript">
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['School', 'English Learners'],
-          ['Buena Terra', 104],
-          ['Centralia', 260],
-          ['Danbrook', 394],
-          ['Dysinger', 92],
-          ['Los Coyotes', 63],
-          ['Miller', 101],
-          ['San Marino', 140],
-          ['Raymond Temple', 103]
-        ]);
-
-        var options = {
-          title: 'English Learners - 1257 Students',
-          pieHole: 0.3,
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('english-learners'));
-        chart.draw(data, options);
-      }
-    </script>
-
-
-    <!--chronic absentee-->
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-         ['School', '2016-2017', '2017-2018'],
-          ['Buena Terra',  5.00,      4.24],
-          ['Centralia',  6.83,      11.24],
-          ['Danbrook',  9.49,       10.37],
-          ['Dysinger',  4.54,      5.73],
-          ['Los Coyotes',  2.01,      1.65],
-          ['Miller',  3.00,     5.25],
-          ['San Marino',  6.07,       7.90],
-          ['Raymond Temple',  8.23,      8.99],
-          ['District', 5.82, 7.04]
-        ]);
-
-        var options = {
-          chart: {
-            title: 'Chronic Absentee Rate',
-          },
-        };
-
-        var chart = new google.charts.Bar(document.getElementById('chronic-absenteeism'));
-
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-    </script>
-
-     <!--truancy-->
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-         ['School', '2016-2017', '2017-2018'],
-          ['Buena Terra',  5.00,      4.24],
-          ['Centralia',  6.83,      11.24],
-          ['Danbrook',  9.49,       10.37],
-          ['Dysinger',  4.54,      5.73],
-          ['Los Coyotes',  2.01,      1.65],
-          ['Miller',  3.00,     5.25],
-          ['San Marino',  6.07,       7.90],
-          ['Raymond Temple',  8.23,      8.99],
-          ['District', 5.82, 7.04]
-        ]);
-
-        var options = {
-          chart: {
-            title: 'Truancy Rate',
-          },
-        };
-
-        var chart = new google.charts.Bar(document.getElementById('truancy'));
-
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-    </script>
 </head>
 <body>
     <header>
@@ -221,19 +42,22 @@
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Enrollment <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="./pages/district/3_year_enrollment.html">3 Year Enrollment</a>
+                </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Discipline <i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-content">
-                    <a href="./pages/district/caaspp_math.html">Suspensions</a>
-                    <a href="./pages/district/caaspp_math.html">OMC</a>
+                    <a href="./pages/district/suspensions.html">Suspensions</a>
+                    <a href="#">OMC</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">CAASPP <i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-content">
-                    <a href="./pages/district/caaspp_math.html">Math</a> 
-                    <a href="./pages/district/caaspp_ela.html">ELA</a>
+                    <a href="./pages/district/caaspp_math.html">Math Claims</a> 
+                    <a href="./pages/district/caaspp_ela.html">ELA Claims</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -246,7 +70,7 @@
             <div class="dropdown">
                 <button class="dropbtn">Language Fluency<i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-content">
-                    <a href="./pages/district/caaspp_math.html">EL</a> 
+                    <a href="./pages/district/el.html">EL</a> 
                     <a href="./pages/district/caaspp_ela.html">RFEP</a>
                     <a href="./pages/district/caaspp_ela.html">IFEP</a>
                 </div>
@@ -254,18 +78,9 @@
         </div>
     </header>
     <main>
-        <article class="project" id="enrollment">
-        </article>
-        <article class="project" id="attendance">
-        </article>
-        <article class="project" id="truancy">
-        </article>
-        <article class="project" id="chronic-absenteeism">
-        </article>
-        <article class="project" id="suspension">
-        </article>
-        <article class="project" id="english-learners">
-        </article> 
+        
+        
+         
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
     </script>

@@ -109,3 +109,9 @@ footer {
   text-align: center;
   font-weight: bold;
 }
+
+#enrollment, #attendance, #truancy, #chronic-absenteeism, #suspension, #english-learners {
+  width: 90%;
+  height: 240px;
+}
+
